@@ -1,0 +1,6 @@
+DROP TYPE IF EXISTS student_full_name;
+DROP TYPE IF EXISTS student;
+DROP TYPE IF EXISTS data_form;
+DROP TYPE IF EXISTS answers;
+
+DROP KEYSPACE IF EXISTS labwork1BD;
