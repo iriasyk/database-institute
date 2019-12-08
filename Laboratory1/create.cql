@@ -13,28 +13,34 @@ CREATE TYPE IF NOT EXISTS student_full_name (
 
 CREATE TABLE IF NOT EXISTS student (
 	email text,
-	full_name FROZEN<student_full_name> static,
+	full_name FROZEN<student_full_name>,
 	PRIMARY KEY ((email))
 );
+
 
 CREATE TABLE IF NOT EXISTS data_form (
 	email text,
 	name_data_form text,
 	answers_on_questions text,
 	adding_comment text,
-	PRIMARY KEY ((email), name_data_form, answers_on_questions, adding_comment)
-);
-
-CREATE TABLE IF NOT EXISTS answers (
-	student FROZEN<student> static,
-	data FROZEN<data_form> static,
-	perstange_of_dissatistisfied set<float> static,
-	perstange_of_satistisfied set<true> static,
-	selected_comments text,
-	PRIMARY KEY ((data), perstange_of_dissatistisfied, perstange_of_satistisfied, selected_comments)
+	PRIMARY KEY ((email), name_data_form, answers_on_questions)
 );
 
 CREATE TABLE IF NOT EXISTS departament_of_the_institute (
-	data text,
-	PRIMARY KEY((data))
+	departament_of_the_institute_data text,
+	PRIMARY KEY((departament_of_the_institute_data))
+);
+
+CREATE TABLE IF NOT EXISTS answers (
+	departament_of_the_institute_data text,
+
+	email text,
+
+	answers_on_questions text,
+	adding_comment text,
+	name_data_form text,
+
+	perstange_of_dissatistisfied text,
+
+	PRIMARY KEY ((departament_of_the_institute_data), email, answers_on_questions, adding_comment)
 );

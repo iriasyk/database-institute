@@ -1,6 +1,7 @@
-DROP TYPE IF EXISTS student_full_name;
-DROP TYPE IF EXISTS student;
-DROP TYPE IF EXISTS data_form;
-DROP TYPE IF EXISTS answers;
+DROP TABLE IF EXISTS student_full_name;
+DROP TABLE student;
+DROP TABLE data_form;
+DROP TABLE departament_of_the_institute;
+DROP TABLE answers;
 
-DROP KEYSPACE IF EXISTS labwork1BD;
+DROP KEYSPACE labwork1BD;
