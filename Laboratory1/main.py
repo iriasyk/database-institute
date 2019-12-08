@@ -3,7 +3,7 @@ from cassandra.query import SimpleStatement
 from cassandra.cluster import Cluster
 
 cluster = Cluster()
-connection = cluster.connect('labwork1BD')
+connection = cluster.connect('labwork1bd')
 
 fileList = ['drop.cql', 'create.cql', 'work.cql']
 
