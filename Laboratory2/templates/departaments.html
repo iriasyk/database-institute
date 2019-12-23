@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">departament of the institute data</th>
+                <th scope="col">department number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for user in department_number %}
+            <tr>
+                <td> {{user.departament_of_the_institute_data }} </td>
+                <td> {{user.department_number}} </td>
+                 <td>
+                    <a href="/edit_departments/{{user.department_number }}" type="button" class="btn btn-warning" name="btn_edit_user">Edit</a>
+                    <a href="/delete_departments/{{user.department_number }}" type="button" class="btn btn-danger" name="btn_delete_user">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            <tr>
+                <td> <a href="/new_departament" type="button" class="btn btn-success" name="btn_new_skill">New Department_number</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
